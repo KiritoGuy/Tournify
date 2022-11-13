@@ -79,10 +79,10 @@ async def assign_role(self, role, df, name, ctx):
         e = Embed(description="Member(s) with this id: **{', '.join(x for x in users_string)}** are not reachable."
         await ctx.send(embed=e)
 
-    async def get_data_from_db(self):
+    async def get_data_from_db(self, URL):
         names = []
         # keep_default_na = False, to reject nan values
-        df = pd.read_csv(self.URL, keep_default_na=False)
+        df = pd.read_csv(URL, keep_default_na=False)
 
         for number in range(len(df.index)):
             # gets channel names from the column channel_name in the db
