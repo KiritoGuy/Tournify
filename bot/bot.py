@@ -52,7 +52,8 @@ class Tournify(commands.Bot):
         super().__init__(
             command_prefix=self.prefix,
             case_insensitive=True,
-            intents=intents)
+            intents=intents,
+            help_command=None)
 
     def setup(self):
         print("Running setup...")
