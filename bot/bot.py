@@ -6,7 +6,7 @@ from discord.errors import Forbidden
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound, Context
 
-IGNORE_EXCEPTIONS = (CommandNotFound,)
+IGNORE_EXCEPTIONS = (CommandNotFound)
 
 """	
 Setup bot intents (events restrictions)
@@ -60,7 +60,7 @@ class Tournify(commands.Bot):
         print("--------------------------")
         for cog in self._cogs:
             try:
-                self.load_extension(f"bot.cogs.{cog}")
+                await self.load_extension(f"bot.cogs.{cog}")
                 print(f"Loaded cog {cog}.")
             except Exception as e:
                 exception = f"{type(e).__name__}: {e}"
