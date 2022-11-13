@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import discord
-from config import BOT_TOKEN # config file
+from bot.config import BOT_TOKEN # config file
 from discord.errors import Forbidden
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound, Context
