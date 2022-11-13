@@ -1,6 +1,6 @@
 import asyncio
 from discord import Embed
-from config import MAIN_COLOR, RED_COLOR, HEADER
+from bot.config import MAIN_COLOR, RED_COLOR, HEADER
 
 
 
