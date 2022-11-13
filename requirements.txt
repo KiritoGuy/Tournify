@@ -1,2 +1,3 @@
 pandas
 discord.py
+python-dotenv
